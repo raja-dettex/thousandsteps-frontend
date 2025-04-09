@@ -115,6 +115,13 @@ export const Navbar: React.FC = () => {
             <><span className="block text-[#FFE066] px-4 py-2 bg-[#003E4F] rounded-xl text-center">
               Hello, {username}
             </span>
+            <button
+              
+              onClick={e=> handleSignOut(e)}
+              className="block bg-[#00A896] text-white px-4 py-2 rounded-xl text-center hover:bg-[#01957f]"
+            >
+              Sign Out
+            </button>
             </>
           ) : (
             <button
