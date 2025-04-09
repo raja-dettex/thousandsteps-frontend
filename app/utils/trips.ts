@@ -28,7 +28,7 @@ export const addTrip = async (trip: Trip, token: string) => {
 
 export const getAllTrips = async () => { 
     try { 
-        const response = await axios.get(`${base_url}/trips`)
+        const response = await axios.get(`${base_url}/trips/`)
         return response
     } catch(error) { 
         console.log(error)

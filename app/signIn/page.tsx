@@ -30,6 +30,8 @@ export default function AuthPage ()  {
     if(response?.status === 201) { 
       console.log(response.data)
       localStorage.setItem("token", JSON.stringify({...response.data, email}))
+      console.log(process.env)
+      console.log(process.env.NEXT_PUBLIC_RAILWAY_PRIVATE_DOMAIN)
       try { 
         const res = await axios.post(`${internal_base_url}/api/auth/set-cookie`, { 
           token: response.data.token, role: response.data.role
